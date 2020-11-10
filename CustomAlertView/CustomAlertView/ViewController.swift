@@ -16,7 +16,10 @@ class ViewController: UIViewController {
 
     @IBAction func clickOpenPopUp(_ sender : UIButton) {
         let msgPopup : CustomAlertVC = CustomAlertVC.init(nibName: "CustomAlertVC", bundle: nil)
-        msgPopup.selectOption = 2
+        // 1 : Title, Image and Desc
+        // 2 : Title and Desc
+        // 3 : Title and Image
+        msgPopup.selectOption = 3
         self.navigationController?.presentVC(msgPopup)
         
         msgPopup.callbackSelectedOption = {(indexID) -> Void in
@@ -28,6 +31,5 @@ class ViewController: UIViewController {
             }
         }
     }
-
 }
 
